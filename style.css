@@ -1,0 +1,602 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  font-family: "Roboto", sans-serif;
+  color: white;
+  box-sizing: border-box;
+  background-color: #0c0b0b;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* ..........header styles starts.......... */
+
+.header {
+  background-color: #0c0b0b;
+  display: flex;
+  padding: 0px 16px;
+  justify-content: space-between;
+  align-content: center;
+  font-size: 10px;
+  height: 56px;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  height: 56px;
+  box-shadow: 0px 2px 4px rgba(24, 24, 24, 0.5);
+  z-index: 10000;
+}
+
+.left-section {
+  height: auto;
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+}
+
+.icon {
+  fill: white;
+  height: 24px;
+}
+
+.hamburger-menu-button {
+  padding: 8px;
+  border: none;
+  outline: none;
+  width: 40px;
+  height: 40px;
+  transition: all 0.2s;
+  border-radius: 50%;
+}
+
+.hamburger-menu-button:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  cursor: pointer;
+}
+
+.hamburger-icon {
+  background-color: rgba(0, 0, 0, 0);
+}
+
+.youtube-logo-button {
+  border: none;
+  outline: none;
+  padding: 18px 14px 18px 16px;
+  height: 20px;
+  width: 93px;
+  align-self: flex-start;
+  position: relative;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.country {
+  position: absolute;
+  top: 14px;
+  right: -30px;
+  font-size: 10px;
+  font-weight: 600;
+  color: gray;
+}
+
+.youtube-logo {
+  height: 20px;
+}
+
+.middle-section {
+  display: flex;
+
+  flex: 1;
+  justify-content: center;
+  align-items: center;
+  align-self: center;
+}
+
+.search-section {
+  height: 40px;
+  margin-left: 40px;
+  padding: 0px 4px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex: 1;
+  max-width: 645px;
+}
+
+.search-bar {
+  height: 38.4px;
+  padding: 0px 4px 0px 16px;
+  border: 0.8px solid rgb(48, 48, 48);
+  border-right: none;
+  border-radius: 40px 0 0 40px;
+  font-size: 16px;
+  flex-grow: 1;
+  flex-shrink: 1;
+  outline: none;
+  width: 536px;
+}
+
+.search-icon-button {
+  height: 38.4px;
+  width: 64px;
+  background-color: rgba(255, 255, 255, 0.08);
+  border: 0.8px solid rgb(48, 48, 48);
+  border-left: none;
+  border-radius: 0 40px 40px 0;
+  outline: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.search-icon {
+  background-color: rgba(255, 255, 255, 0);
+}
+
+.voice-button {
+  width: 40px;
+  height: 40px;
+  background-color: rgb(48, 48, 48);
+  border: none;
+  border-radius: 50%;
+  margin-left: 8px;
+  transition: all 0.2s;
+  position: relative;
+}
+
+.voice-button:hover {
+  background-color: rgba(255, 255, 255, 0.3);
+  cursor: pointer;
+}
+
+.voice-search-icon {
+  background-color: rgba(48, 48, 48, 0);
+}
+
+.tooltip-voice,
+.tooltip {
+  position: absolute;
+  white-space: nowrap;
+  bottom: -100%;
+  left: -100%;
+  background-color: rgb(59, 55, 55);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 4px 7px;
+  border-radius: 7px;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.voice-button:hover .tooltip-voice {
+  opacity: 1;
+}
+
+.right-section {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  min-width: 225px;
+  gap: 10px;
+}
+
+.create-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 97.5px;
+  border: none;
+  background-color: rgb(48, 48, 48);
+  font-size: 14px;
+  height: 36px;
+  border-radius: 18px;
+  transition: all 0.2s;
+}
+
+.create-button:hover {
+  background-color: rgba(255, 255, 255, 0.3);
+  cursor: pointer;
+}
+
+.create-icon {
+  margin: 0px 6px;
+  margin-left: 0px;
+  padding-left: 0px;
+  background-color: rgba(0, 0, 0, 0);
+  width: 24px;
+  height: 24px;
+}
+
+.create-text {
+  width: 41px;
+  margin-right: 4px;
+  background-color: rgba(0, 0, 0, 0);
+  font-weight: 500;
+}
+
+.notification-button {
+  border: none;
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  transition: all 0.2s;
+  position: relative;
+}
+
+.notification-button:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  cursor: pointer;
+}
+
+.notification-button:hover .notification-tooltip {
+  opacity: 1;
+}
+
+.notification-tooltip {
+  position: absolute;
+  white-space: nowrap;
+  bottom: -100%;
+  left: -50%;
+  background-color: rgb(59, 55, 55);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 4px 7px;
+  border-radius: 7px;
+  opacity: 0;
+  pointer-events: none;
+  z-index: 500;
+}
+
+.notification-icon {
+  background-color: rgba(0, 0, 0, 0);
+  height: 24px;
+  width: 24px;
+}
+
+.notification-icon-number {
+  position: absolute;
+  top: 3px;
+  right: 3px;
+  background-color: red;
+  padding: 2px 5px;
+  border-radius: 50%;
+  font-size: 10px;
+}
+
+.my-icon-button {
+  padding: 0px 6px;
+  border: none;
+  width: 60px;
+  height: 40px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.my-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+/* ..........header styles ends.......... */
+
+/* ..........sidebar styles starts.......... */
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  top: 60px;
+  left: 0;
+  bottom: 0;
+  width: 230px;
+  background-color: #0c0b0b;
+  box-shadow: 2px 0px 4px rgba(24, 24, 24, 0.5);
+  /* height: auto; */
+  overflow-y: auto;
+  padding-bottom: 100px;
+  z-index: 8000;
+  /* scrollbar-width: none; */
+}
+
+.sidebar::-webkit-scrollbar {
+  width: 6px;
+  background: transparent;
+}
+
+.sidebar::-webkit-scrollbar-thumb {
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 10px;
+  background: transparent;
+}
+
+.sidebar:hover::-webkit-scrollbar-thumb {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.sidebar::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(255, 255, 255, 0.4);
+}
+
+.section {
+  padding-top: 10px;
+  padding-left: 5px;
+  padding-right: 5px;
+  display: flex;
+  flex-direction: column;
+  background-color: #0c0b0b;
+  padding-bottom: 5px;
+}
+
+.element-button {
+  display: flex;
+  border: none;
+  align-items: center;
+  border-radius: 7px;
+  padding: 8px 15px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.element-button:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.element-icon-box {
+  background-color: rgba(0, 0, 0, 0);
+}
+
+.element-icon {
+  height: 24px;
+  width: 24px;
+  background-color: rgba(0, 0, 0, 0);
+}
+
+.element-name {
+  font-size: 15px;
+  font-weight: 400;
+  margin-left: 25px;
+  background-color: rgba(0, 0, 0, 0);
+}
+
+.horizontal-rule {
+  border: none;
+  background-color: red;
+  height: 1px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-right: 10px;
+  margin-left: 10px;
+}
+
+.title-box {
+  display: flex;
+  gap: 15px;
+  padding: 5px 15px;
+  align-items: center;
+  /* background-color: green; */
+  border-radius: 7px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.title-box:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.title-text {
+  font-size: 19px;
+  background-color: rgba(0, 0, 0, 0);
+}
+
+.title-symbol {
+  font-size: 25px;
+  background-color: rgba(0, 0, 0, 0);
+}
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 15px 25px;
+}
+
+/* video-section */
+
+.grid-box {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  row-gap: 10px;
+  column-gap: 15px;
+  padding-top: 70px;
+  padding-left: 250px;
+}
+
+.vid {
+  height: 350px;
+  width: 388px;
+  /* background-color: lightpink; */
+}
+
+.thumbnails-container {
+  position: relative;
+}
+
+.video-runtime {
+  background-color: rgba(0, 0, 0, 0.7);
+  font-size: 12px;
+  font-weight: bold;
+  padding: 4px 8px;
+  border-radius: 5px;
+  position: absolute;
+  bottom: 13px;
+  right: 2px;
+}
+
+.thumbnails {
+  width: 395px;
+  height: 210px;
+  border-radius: 13px;
+  cursor: pointer;
+}
+
+.vid-info {
+  display: flex;
+  width: 388px;
+  height: 100px;
+  padding: 5px;
+  gap: 10px;
+  cursor: pointer;
+}
+
+.icon-img {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+}
+
+.video-stats {
+  display: flex;
+}
+
+.video-title {
+  font-size: 16px;
+  /* line-height: 20px; */
+  margin-bottom: 7px;
+  word-spacing: 1px;
+  font-weight: 500;
+}
+
+.channel-name {
+  font-size: 14px;
+  color: lightgray;
+  margin-bottom: 3px;
+}
+
+.channel-name:hover {
+  color: white;
+}
+
+.video-stats {
+  font-size: 14px;
+  color: lightgray;
+}
+
+.dot {
+  margin-right: 5px;
+  margin-left: 5px;
+}
+
+.stats {
+  color: lightgray;
+}
+
+
+
+
+
+
+@media (max-width: 767px) {
+  .sidebar {
+    display: none;
+  }
+
+  .grid-box {
+    grid-template-columns: 1fr;
+    padding: 56px 12px 72px; 
+    gap: 16px;
+  }
+
+  .header {
+    height: 56px;
+    padding: 0 12px;
+  }
+  
+  .middle-section,
+  .right-section {
+    display: none;
+  }
+
+  .mobile-bottom-bar {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 56px;
+    background: #0c0b0b;
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    z-index: 1000;
+    padding: 0 12px;
+  }
+
+  .nav-item {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    position: relative;
+  }
+
+  .create-button-container {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: -20px;
+    width: 48px;
+    height: 48px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 700;
+    border-radius: 50%;
+  }
+
+  .create-button {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.08);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+  }
+
+  .bottom-nav-icon {
+    width: 24px;
+    height: 24px;
+    margin-bottom: 2px;
+  }
+
+  .profile-picture {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+  .nav-item.active span {
+    color: white;
+    font-weight: 500;
+  }
+}
+
+@media (min-width: 768px) {
+  .mobile-bottom-bar {
+    display: none;
+  }
+}
+
+
+
