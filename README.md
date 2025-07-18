@@ -20,7 +20,7 @@ A fully responsive front-end clone of the YouTube homepage using only HTML and C
 
 ## 🌐 Live Preview
 
-[GitHub Pages Link](https://your-username.github.io/youtube-clone)
+[GitHub Pages Link]([https://your-username.github.io/youtube-clone](https://bhushanmalviya02.github.io/YouTube-Clone/))
 
 
 ## 💡 Inspiration
@@ -29,6 +29,6 @@ Designed based on the official YouTube layout with a focus on clean structure an
 
 ## ✨ Author
 
-- [Bhushan D Malviya](https://github.com/your-username)
+- [Bhushan D Malviya](https://github.com/BhushanMalviya02)
 
 
